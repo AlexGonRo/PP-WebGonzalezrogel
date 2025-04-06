@@ -1,398 +1,451 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-   <head>
-    <title>Alejandro González Rogel - Training my AI...and my patience!</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
+<head>
+	<title>Alejandro González Rogel - Training my AI...and my patience!</title>
+	<link rel="shortcut icon" href="images/icons/gr_icon2.ico" type="image/x-icon">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- The font looks nicer. I could play with it a little bit more-->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<!-- Other CSS sheets-->
 	<link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
 
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
+	<!-- Bootstrap before my own style!-->
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
 
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark js-navbar main-navbar site-navbar-target">
-	    <div class="container d-flex justify-content-between align-items-center">
-	      
-		  <!-- Name -->
-		  <div>
-		    <a class="navbar-brand" href="index.html">Alejandro</a>
-		  </div>
+<body data-bs-spy="scroll" data-bs-target=".site-navbar-target" data-bs-offset="300">
 
-		  <!-- Navbar button-->
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#navbar-options" aria-controls="navbar-options" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="icon-menu" style="font-size: 2rem;"></span>	<!-- TODO A bit of a hack here, this size might not match with the name next to it. But it appears to work just fine now-->
-	      </button>
+	<nav class="navbar navbar-expand-lg navbar-dark js-navbar main-navbar site-navbar-target">
+		<div class="container d-flex justify-content-between align-items-center">
 
-		  <!-- Navbar options -->
-	      <div class="collapse navbar-collapse" id="navbar-options">
-	          <ul class="navbar-nav nav ml-auto">
-	            <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	            <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	            <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	            <li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>
-	            <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	          </ul>
+			<!-- Name -->
+			<div>
+				<a class="navbar-brand" href="index.html">Alejandro</a>
+			</div>
 
-			  <ul class="navbar-nav nav ml-auto">
-				<!--No he conseguido hacer funcionar esta...
+			<!-- Navbar button-->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbar-options" aria-controls="navbar-options" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="icon-menu" style="font-size: 2rem;"></span>
+				<!-- TODO A bit of a hack here, this size might not match with the name next to it. But it appears to work just fine now-->
+			</button>
+
+			<!-- Navbar options -->
+			<div class="collapse navbar-collapse" id="navbar-options">
+				<ul class="navbar-nav nav ms-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+
+				<ul class="navbar-nav nav ms-auto">
+					<!--No he conseguido hacer funcionar esta...
 				<li class="nav-item"><a href="https://github.com/AlexGonRo" class="nav-link"><span class="icon icon-github"></span></a></li>-->
-				<li class="nav-item"> 
-			      <a href="https://github.com/AlexGonRo" class="nav-link" target="_blank">
-				    <img src="images/icons/github-mark-white.png" alt="GitHub" width="35" class="img-fluid">
-				  </a>
-			    </li>
-				<li class="nav-item">
-				  <a href="https://www.linkedin.com/in/a-gonzalez-rogel/" class="nav-link" target="_blank">
-				    <img src="images/icons/InBug-White.png" alt="LinkedIn" width="35" class="img-fluid">
-				  </a>
-				</li>
-			</ul>
-	      </div>
-	    </div>
-	  </nav>
-
-	  <section id="home-section" class="hero pt-0">
-
-		<div class="container px-0 px-md-3">
-
-			<div id="intro-row" class="row d-md-flex no-gutters align-items-end justify-content-end">
-
-			  <div id="intro-image" class="order-md-last js-fullheight order-md-last img" style="background-image:url(images/alejandro_1.png);">
-				<div class="overlay"></div>
-			  </div>
-
-			  <div id="intro-text-div" class="d-flex align-items-center animate-object">
-				<div id="intro-text" class="text">
-				  <p><span class="subheading">Hello, world!</span></p>
-				  <h1 class="mb-4 mt-3">I'm <span>Alejandro, </span></h1>
-				  <h1 class="mb-4">a curious <span>AI / Big Data developer.</span></h1>
-				  <h2 class="mb-4">Thanks for stopping by!</h2>
-			    </div>
-			  </div>
+					<li class="nav-item">
+						<a href="https://github.com/AlexGonRo" class="nav-link" target="_blank">
+							<img src="images/icons/github-mark-white.png" alt="GitHub" width="35" class="img-fluid">
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="https://www.linkedin.com/in/a-gonzalez-rogel/" class="nav-link pe-lg-0" target="_blank">
+							<img src="images/icons/InBug-White.png" alt="LinkedIn" width="35" class="img-fluid">
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
-    </section>
+	</nav>
 
-    <section class="img my-section even-section" id="about-section">
-    	<div class="container">
-    		<div class="row d-flex">
-    			<div class="col-md-6 col-lg-5 d-flex">
-    				<div class="img-about img d-flex align-items-stretch">
-    					<div class="overlay"></div>
-	    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/alejandro_2.jpg);">
-	    				</div>
-    				</div>
-    			</div>
-    			<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-    				<div class="row justify-content-start pb-3">
-		          <div class="col-md-12 heading-section animate-object">
-		            <h2 class="mb-2">About Me</h2>
-		            <p>&emsp; My name is Alejandro González Rogel, a software engineer with experience in the field of Big Data, and a profound interest in Artificial Intelligence. Currently living in Spain, I joined the workforce in 2020. </p>
-					<p>&emsp; AI caught my eye when, during my Erasmus, I took a class in bio-inspired algorithms. I think what got me hooked was how AI could tackle complex problems without necessarily having to code the solution. Since then, I have been striving to learn more about the world of machine learning and its real-world applications.</p>
-					<p>&emsp; Over the years, I have participated in both academia and the private sector, experienced the good and bad of living in three different countries, and taken on many diverse professional endeavors. I enjoy the thrill of discovering the unknown, so let us hope I keep facing new challenges in the future!</p>
-		          </div>
-		        </div>
-	        </div>
-        </div>
-    	</div>
-    </section>
+	<section id="home-section" class="hero pt-0">
 
-    <section class="my-section" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-              <div class="col-md-10 heading-section text-center animate-object">
-                <h2 class="mb-2">Resume</h2>
-                <p></p>
-              </div>
-            </div>
+		<div class="container">
+
+			<div id="intro-row" class="row d-md-flex align-items-end justify-content-end">
+
+				<div id="intro-image" class="order-md-last js-fullheight img"
+					style="background-image:url(images/alejandro_1.png);">
+				</div>
+
+				<div id="intro-text-div" class="d-flex align-items-center animate-object">
+					<div id="intro-text" class="text">
+						<p><span class="subheading">Hello, world!</span></p>
+						<h1 class="mb-4 mt-3">I'm <span>Alejandro, </span></h1>
+						<h1 class="mb-4">a curious <span>AI / Big Data developer.</span></h1>
+						<h2 class="mb-4">Thanks for stopping by!</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="img my-section even-section" id="about-section">
+		<div class="container">
+			<div class="row d-flex">
+				<div class="col-md-6 col-lg-5 d-flex">
+					<div class="img-about img d-flex align-items-stretch">
+						<div class="overlay"></div>
+						<div class="img d-flex align-self-stretch align-items-center"
+							style="background-image:url(images/alejandro_2.jpg);">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-7 ps-lg-5 pb-5">
+					<div class="row justify-content-start pb-3">
+						<div class="col-md-12 heading-section animate-object">
+							<h2 class="mb-2">About Me</h2>
+							<p class="text-justify">&emsp; My name is Alejandro González Rogel, a software engineer with experience in the
+								field of Big Data, and a profound interest in Artificial Intelligence. Currently living
+								in Spain, I joined the workforce in 2020. </p>
+							<p class="text-justify">&emsp; AI caught my eye when, during my Erasmus, I took a class in bio-inspired
+								algorithms. I think what got me hooked was how AI could tackle complex problems without
+								necessarily having to code the solution. Since then, I have been striving to learn more
+								about the world of machine learning and its real-world applications.</p>
+							<p class="text-justify">&emsp; Over the years, I have participated in both academia and the private sector,
+								experienced the good and bad of living in three different countries, and taken on many
+								diverse professional endeavors. I enjoy the thrill of discovering the unknown, so let us
+								hope I keep facing new challenges in the future!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="my-section" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center animate-object">
+					<h2 class="mb-2">Resume</h2>
+					<p></p>
+				</div>
+			</div>
 
 			<div class="main-timeline">
-			<div class="timeline left-timeline">
-				<div class="card">
-					<div class="card-body p-4 resume-wrap animate-object">
-						<h2><span class="text-left font-weight-bold">Bachelor’s Degree in Computer Science</span> <span class="date text-right">2011</span></h2>
-						<span class="position">University of Burgos, Spain<br>4.5 years</span>
-						<p class="mt-4">Learned about math, hardware, software, and majored in <span class="text-primary font-weight-bold">computation</span>.</p>
+				<div class="timeline left-timeline">
+					<div class="card">
+						<div class="card-body p-4 resume-wrap animate-object">
+							<h2><span class="text-start fw-bold">Bachelor’s Degree in Computer Science</span>
+								<span class="date text-end">2011</span></h2>
+							<span class="card-place-time">University of Burgos, Spain<br>4.5 years</span>
+							<p class="mt-4">Learned about math, hardware, software, and majored in <span
+									class="text-primary fw-bold">computation</span>.</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="timeline right-timeline">
-				<div class="card">
-					<div class="card-body p-4 resume-wrap animate-object">
-						<h2><span class="date text-left">2013</span> <span class="text-right font-weight-bold">Erasmus programme</span></h2>
-						<span class="position">Czech Technical University in Prague, Czech Republic<br>1 year</span>
-						<p class="mt-4"></p>
+				<div class="timeline right-timeline">
+					<div class="card">
+						<div class="card-body p-4 resume-wrap animate-object">
+							<h2><span class="date text-start">2013</span> <span
+									class="text-end fw-bold">Erasmus programme</span></h2>
+							<span class="card-place-time">Czech Technical University in Prague, Czech Republic<br>1 year</span>
+							<p class="mt-4"></p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="timeline left-timeline">
-				<div class="card">
-					<div class="card-body p-4 resume-wrap animate-object">
-						<h2><span class="text-left font-weight-bold">Research Intern</span><span class="date text-right">2015</span></h2>
-						<span class="position">University of Burgos, Spain<br>8 months</span>
-						<p class="mt-4">Maintained a <span class="text-primary font-weight-bold">machine learning</span> library and help with the department's <span class="text-primary font-weight-bold">research</span>.</p>
+				<div class="timeline left-timeline">
+					<div class="card">
+						<div class="card-body p-4 resume-wrap animate-object">
+							<h2><span class="text-start fw-bold">Research Intern</span><span
+									class="date text-end">2015</span></h2>
+							<span class="card-place-time">University of Burgos, Spain<br>8 months</span>
+							<p class="mt-4">Maintained a <span class="text-primary fw-bold">machine
+									learning</span> library and help with the department's <span
+									class="text-primary fw-bold">research</span>.</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="timeline right-timeline">
-				<div class="card">
-					<div class="card-body p-4 resume-wrap animate-object">
-						<h2><span class="date text-left">2016</span> <span class="text-right font-weight-bold">Master of Science in Artificial Intelligence</span></h2>
-						<span class="position">Radboud University Nijmegen, The Netherlands<br>3.5 years</span>
-						<p class="mt-4">Acquired knowledge in mathematics, <span class="text-primary font-weight-bold">neural networks</span>, computer vision, language processing, and autonomous agents.</p>
+				<div class="timeline right-timeline">
+					<div class="card">
+						<div class="card-body p-4 resume-wrap animate-object">
+							<h2><span class="date text-start">2016</span> <span
+									class="text-end fw-bold">Master of Science in Artificial Intelligence</span></h2>
+							<span class="card-place-time">Radboud University Nijmegen, The Netherlands<br>3.5 years</span>
+							<p class="mt-4">Acquired knowledge in mathematics, <span
+									class="text-primary fw-bold">neural networks</span>, computer vision,
+								language processing, and autonomous agents.</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="timeline left-timeline">
-				<div class="card">
-					<div class="card-body p-4 resume-wrap animate-object">
-						<h2><span class="text-left font-weight-bold">First academic publication</span><span class="date text-right">2017</span></h2>
-						<span class="position">The Netherlands</span>
-						<p class="mt-4">Coauthored the <span class="text-primary font-weight-bold">academic paper</span> "MR-DIS: democratic instance selection for big data by MapReduce"</p>
+				<div class="timeline left-timeline">
+					<div class="card">
+						<div class="card-body p-4 resume-wrap animate-object">
+							<h2><span class="text-start fw-bold">First academic publication</span><span
+									class="date text-end">2017</span></h2>
+							<span class="card-place-time">The Netherlands</span>
+							<p class="mt-4">Coauthored the <span class="text-primary fw-bold">academic
+									paper</span> "MR-DIS: democratic instance selection for big data by MapReduce"</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="timeline right-timeline">
-				<div class="card">
-					<div class="card-body p-4 resume-wrap animate-object">
-						<h2><span class="date text-left">2017</span><span class="text-right font-weight-bold">AI Intern in NLP</span></h2>
-						<span class="position">Pubbly.nl, The Netherlands<br>6 months</span>
-						<p class="mt-4">Developed an <span class="text-primary font-weight-bold">Extreme Multi-label Classifier (XMC)</span> for labeling text articles.</p>
+				<div class="timeline right-timeline">
+					<div class="card">
+						<div class="card-body p-4 resume-wrap animate-object">
+							<h2><span class="date text-start">2017</span><span class="text-end fw-bold">AI
+									Intern in NLP</span></h2>
+							<span class="card-place-time">Pubbly.nl, The Netherlands<br>6 months</span>
+							<p class="mt-4">Developed an <span class="text-primary fw-bold">Extreme Multi-label
+									Classifier (XMC)</span> for labeling text articles.</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="timeline left-timeline">
-				<div class="card">
-					<div class="card-body p-4 resume-wrap animate-object">
-						<h2><span class="text-left font-weight-bold">Teacher Assistant</span><span class="date text-right">2018</span></h2>
-						<span class="position">Radboud University Nijmegen, The Netherlands<br>4 months</span>
-						<p class="mt-4">Assisted during seminars and in grading assignments.</p>
+				<div class="timeline left-timeline">
+					<div class="card">
+						<div class="card-body p-4 resume-wrap animate-object">
+							<h2><span class="text-start fw-bold">Teacher Assistant</span><span
+									class="date text-end">2018</span></h2>
+							<span class="card-place-time">Radboud University Nijmegen, The Netherlands<br>4 months</span>
+							<p class="mt-4">Assisted during seminars and in grading assignments.</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="timeline right-timeline">
-				<div class="card">
-					<div class="card-body p-4 resume-wrap animate-object">
-						<h2><span class="date text-left">2020</span><span class="text-right font-weight-bold">Software Engineer</span></h2>
-						<span class="position">Zylk.net, Spain<br>4.5 years</span>
-						<p class="mt-4">Developed data pipelines, ETLs, analytics, and stream processing applications among other <span class="text-primary font-weight-bold">Big Data solutions</span>.</p>
+				<div class="timeline right-timeline">
+					<div class="card">
+						<div class="card-body p-4 resume-wrap animate-object">
+							<h2><span class="date text-start">2020</span><span
+									class="text-end fw-bold">Software Engineer</span></h2>
+							<span class="card-place-time">Zylk.net, Spain<br>4.5 years</span>
+							<p class="mt-4">Developed data pipelines, ETLs, analytics, and stream processing
+								applications among other <span class="text-primary fw-bold">Big Data
+									solutions</span>.</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="timeline left-timeline">
-				<div class="card">
-					<div class="card-body p-4 resume-wrap animate-object">
-						<h2><span class="text-left font-weight-bold">Adquired new roles at work</span></span><span class="date text-right">2023</span></h2>
-						<span class="position">Zylk.net, Japan</span>
-						<p class="mt-4">Started working as a <span class="text-primary font-weight-bold">team leader</span> and taking a more active role in <span class="text-primary font-weight-bold">software design</span>.
-						<br>And I started working remotely from Japan too!</p>
-				</div>
-				</div>
-			</div>
-			<div class="timeline right-timeline">
-				<div class="card">
-					<div class="card-body p-4 resume-wrap animate-object">
-						<h2><span class="date text-left">2025</span><span class="text-right font-weight-bold">And now... <span class="text-primary">What's next?</span></span></h2>
-						<span class="position">Spain</span>
-						<p class="mt-4"></p>
+				<div class="timeline left-timeline">
+					<div class="card">
+						<div class="card-body p-4 resume-wrap animate-object">
+							<h2><span class="text-start fw-bold">Adquired new roles at work</span></span><span
+									class="date text-end">2023</span></h2>
+							<span class="card-place-time">Zylk.net, Japan</span>
+							<p class="mt-4">Started working as a <span class="text-primary fw-bold">team
+									leader</span> and taking a more active role in <span
+									class="text-primary fw-bold">software design</span>.
+								<br>And I started working remotely from Japan too!
+							</p>
+						</div>
 					</div>
 				</div>
-			</div>
+				<div class="timeline right-timeline">
+					<div class="card">
+						<div class="card-body p-4 resume-wrap animate-object">
+							<h2><span class="date text-start">2025</span><span class="text-end fw-bold">And
+									now... <span class="text-primary">What's next?</span></span></h2>
+							<span class="card-place-time">Spain</span>
+							<p class="mt-4"></p>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<!-- TODO I don't know if I want to make this public or not...-->
-    		<div class="row justify-content-center mt-2 mb-4">
-    			<div class="col-md-6 text-center animate-object">
-    				<p><a href="data/CV_Alejandro_Gonzalez_Rogel.pdf" class="btn btn-primary py-4 px-5">Download CV</a></p>
-    			</div>
-    		</div>
+			<div class="row justify-content-center mt-2 mb-4">
+				<div class="col-md-6 text-center animate-object">
+					<p><a href="data/CV_Alejandro_Gonzalez_Rogel.pdf" class="btn btn-primary py-4 px-5">Download CV</a>
+					</p>
+				</div>
+			</div>
 
 
 			<div class="row d-flex justify-content-center mt-5 mx-1 mx-animate-object">
 				<div class="d-flex text-center">
-					<h1 class="font-weight-bold">Which <span class="text-primary">six technologies</span> am I most confident in at the moment?</h1>
+					<h1 class="fw-bold">Which <span class="text-primary">six technologies</span> am I most
+						confident in at the moment?</h1>
 				</div>
 			</div>
 			<div class="row d-flex animate-object my-3">
 				<div class="col-6 col-md-4 col-lg-2 p-1">
 					<div class="conf-tech-box d-flex align-items-center justify-content-center w-100 h-100 p-2">
-							<img src="images/technologies/java_icon.png" class="img-fluid" alt="Java">
+						<img src="images/technologies/java_icon.png" class="img-fluid" alt="Java">
 					</div>
 				</div>
 				<div class="col-6 col-md-4 col-lg-2 p-1">
 					<div class="conf-tech-box d-flex align-items-center justify-content-center h-100 w-100 p-2">
-							<img src="images/technologies/python_icon.png" class="img-fluid" alt="Python">
+						<img src="images/technologies/python_icon.png" class="img-fluid" alt="Python">
 					</div>
 				</div>
 				<div class="col-6 col-md-4 col-lg-2 p-1">
 					<div class="conf-tech-box d-flex align-items-center justify-content-center h-100 w-100 p-2">
-							<img src="images/technologies/flink_icon.png" class="img-fluid" alt="Flink">
+						<img src="images/technologies/flink_icon.png" class="img-fluid" alt="Flink">
 					</div>
 				</div>
 				<div class="col-6 col-md-4 col-lg-2 p-1">
 					<div class="conf-tech-box d-flex align-items-center justify-content-center h-100 w-100 p-2">
-							<img src="images/technologies/kafka_icon.png" class="img-fluid" alt="Kafka">
+						<img src="images/technologies/kafka_icon.png" class="img-fluid" alt="Kafka">
 					</div>
 				</div>
 				<div class="col-6 col-md-4 col-lg-2 p-1">
 					<div class="conf-tech-box d-flex align-items-center justify-content-center h-100 w-100 p-2">
-							<img src="images/technologies/sql_icon.png" class="img-fluid" alt="SQL">
+						<img src="images/technologies/sql_icon.png" class="img-fluid" alt="SQL">
 					</div>
 				</div>
 				<div class="col-6 col-md-4 col-lg-2 p-1">
 					<div class="conf-tech-box d-flex align-items-center justify-content-center h-100 w-100 p-2">
-							<img src="images/technologies/docker_icon.png" class="img-fluid" alt="Docker">
+						<img src="images/technologies/docker_icon.png" class="img-fluid" alt="Docker">
 					</div>
 				</div>
 			</div>
 
-    	</div>
-    </section>
+		</div>
+	</section>
 
-    <section class="my-section even-section" id="blog-section">
-      <div class="container">
-        <div class="row justify-content-center mb-2 pb-5">
-          <div class="col-md-7 heading-section text-center animate-object">
-            <h2 class="mb-2">My Blog</h2>
-            <p>Here you'll find information about my pet projects, ideas, or new technologies I'm working with.</p>
-          </div>
-        </div>
-        <div class="row d-flex">
-			<!-- TODO These entries... if the text is not long enough, the picture will be cut in half. I could try to fix it at some point-->
-          <div class="col-md-4 d-flex animate-object">
-          	<div class="blog-entry justify-content-end">
-              <a href="#" class="block-20" style="background-image: url('images/work_in_progress.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center mb-3 meta">
-	                <p class="mb-0">
-	                	<span class="mr-2">January 22, 2025</span>
-	                </p>
-                </div>
-                <h3 class="heading"><a href="#">Blog post 1</a></h3>
-                <p>Image attribution: Work in progress by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex animate-object">
-          	<div class="blog-entry justify-content-end">
-              <a href="#" class="block-20" style="background-image: url('images/work_in_progress.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center mb-3 meta">
-	                <p class="mb-0">
-	                	<span class="mr-2">October 25, 2024</span>
-	                </p>
-                </div>
-                <h3 class="heading"><a href="#">Blog post 2</a></h3>
-                <p>Coming soon to website near you! You will have to wait until then...</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex animate-object">
-          	<div class="blog-entry justify-content-end">
-              <a href="#" class="block-20" style="background-image: url('images/work_in_progress.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center mb-3 meta">
-	                <p class="mb-0">
-	                	<span class="mr-2">April 11, 2024</span>
-	                </p>
-                </div>
-                <h3 class="heading"><a href="#">Blog post 3</a></h3>
-                <p>I tried retrieving this entry, but got an error message: Error 418 - I'm a teapot.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="my-section contact-section" id="contact-section">
-      <div class="container">
-      	<div class="row justify-content-center mb-2 pb-3">
-          <div class="col-md-7 heading-section text-center animate-object">
-            <h2 class="mb-2">Contact Me</h2>
-			<p>Feel free to contact me by email or by using the form below for any questions regarding my professional availability.</p>
-          </div>
-        </div>
-
-        <div class="row no-gutters">
-			<!-- Texto de la izquierda -->
-			<div class="col-md-5 col-lg-4 animate-object pr-md-3 pr-lg-3">
-				<div class="mail-me-box align-self-stretch box p-3 text-center">
-				<a href="mailto:info@yoursite.com">
-					<div class="icon d-flex align-items-center justify-content-center">
-						<span class="icon-paper-plane"></span>
-					</div>
-					<h3 class="mb-2">Email Address</h3>
-				  <p>alejandro@gonzalezrogel.com</p> <!-- TODO Let's just hope this does not bring too much spam. -->
-				</a>
+	<section class="my-section even-section" id="blog-section">
+		<div class="container">
+			<div class="row justify-content-center mb-2 pb-5">
+				<div class="col-md-7 heading-section text-center animate-object">
+					<h2 class="mb-2">My Blog</h2>
+					<p>Here you'll find information about my pet projects, ideas, or new technologies I'm working with.
+					</p>
 				</div>
 			</div>
-			  
-			<!-- Formulario de la derecha -->
-          	<div class="col-md-7 col-lg-8 order-md-last d-flex animate-object">
-            	<form action="#" class="mail-me-box bg-light pt-2 pb-2 px-4 pt-md-3 pb-md-3 px-md-5 contact-form">
-				<h1 class="font-weight-bold mb-1">Contact form</h1>
-              	<div class="form-group">
-        	        <input type="text" class="form-control" placeholder="Your Name">
-            	</div>
-              	<div class="form-group">
-                	<input type="text" class="form-control" placeholder="Your Email">
-              	</div>
-              	<div class="form-group">
-                	<input type="text" class="form-control" placeholder="Subject">
-              	</div>
-              	<div class="form-group">
-                	<textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-              	</div>
-              	<div class="form-group">
-                	<input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-              	</div>
-            </form>
-        	</div>
-	  	</div>
-	  </div>
-    </section>
-		
+			<div class="row d-flex">
+				<!-- TODO These entries... if the text is not long enough, the picture will be cut in half. I could try to fix it at some point-->
+				<div class="col-md-4 d-flex animate-object">
+					<div class="blog-entry justify-content-end">
+						<a href="#" class="block-20" style="background-image: url('images/work_in_progress.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<div class="d-flex align-items-center mb-3 meta">
+								<p class="mb-0">
+									<span class="me-2">January 22, 2025</span>
+								</p>
+							</div>
+							<h3 class="heading"><a href="#">Blog post 1</a></h3>
+							<p>Image attribution: Work in progress by <a href="http://www.nyphotographic.com/">Nick
+									Youngson</a> <a rel="license"
+									href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a
+									href="http://pix4free.org/">Pix4free</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex animate-object">
+					<div class="blog-entry justify-content-end">
+						<a href="#" class="block-20" style="background-image: url('images/work_in_progress.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<div class="d-flex align-items-center mb-3 meta">
+								<p class="mb-0">
+									<span class="me-2">October 25, 2024</span>
+								</p>
+							</div>
+							<h3 class="heading"><a href="#">Blog post 2</a></h3>
+							<p>Coming soon to website near you! You will have to wait until then...</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex animate-object">
+					<div class="blog-entry justify-content-end">
+						<a href="#" class="block-20" style="background-image: url('images/work_in_progress.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<div class="d-flex align-items-center mb-3 meta">
+								<p class="mb-0">
+									<span class="me-2">April 11, 2024</span>
+								</p>
+							</div>
+							<h3 class="heading"><a href="#">Blog post 3</a></h3>
+							<p>I tried retrieving this entry, but got an error message: Error 418 - I'm a teapot.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-    <footer class="my-footer my-section">
-      <div class="container">
-        <div class="row mb-0">
-          <div class="col-md-8 my-footer-column mb-4">
-              <h2>About</h2>
-			  <!-- You never finish a program, you just stop working on it.
+	<section class="my-section contact-section" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-2 pb-3">
+				<div class="col-md-7 heading-section text-center animate-object">
+					<h2 class="mb-2">Contact Me</h2>
+					<p>Feel free to contact me by email or by using the form below for any questions regarding my
+						professional availability.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<!-- Texto de la izquierda -->
+				<div class="col-md-5 col-lg-4 animate-object pe-md-3 pe-lg-3">
+					<div class="mail-me-box align-self-stretch box p-3 text-center">
+						<a href="mailto:alejandro@gonzalezrogel.com" style="text-decoration: none;">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="icon-paper-plane"></span>
+							</div>
+							<h3 class="mb-2">Email Address</h3>
+							<p>alejandro@gonzalezrogel.com</p>
+							<!-- TODO Let's just hope this does not bring too much spam. -->
+						</a>
+					</div>
+				</div>
+
+				<!-- Formulario de la derecha -->
+				<div class="col-md-7 col-lg-8 order-md-last d-flex animate-object">
+					<form action="#" class="mail-me-box bg-light pt-2 pb-2 px-4 pt-md-3 pb-md-3 px-md-5 contact-form">
+						<h1 class="fw-bold mb-1">Contact form</h1>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Your Name">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Your Email">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Subject">
+						</div>
+						<div class="form-group">
+							<textarea name="" id="" cols="30" rows="7" class="form-control"
+								placeholder="Message"></textarea>
+						</div>
+						<div class="form-group">
+							<input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<footer class="my-footer my-section">
+		<div class="container">
+			<div class="row mb-0">
+				<div class="col-md-8 my-footer-column mb-4">
+					<h2>About</h2>
+					<!-- You never finish a program, you just stop working on it.
 			   Nothing is as permanent as a temporary solution that works.
 			   Give a man a program, and he'll be frustrated for a day. Teach a man to program, and he'll be frustrated for a lifetime.
 			   Can learn to exit Vim, if needed -->
-			   <p class="mb-1">"You never finish a program, you just stop working on it."</p>
-          </div>
+					<p class="mb-1">"You never finish a program, you just stop working on it."</p>
+				</div>
 
-          <div class="col-md-4 my-footer-column">
-            	<h2>Have more questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><a href="https://github.com/AlexGonRo" target="_blank"><span class="icon icon-github"></span><span class="text">Check out my GitHub</span></a></li>
-	                <li><a href="https://www.linkedin.com/in/a-gonzalez-rogel/" target="_blank"><span class="icon icon-linkedin"></span><span class="text">Reach me on Linkedin</span></a></li>
-	              </ul>
-	            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+				<div class="col-md-4 my-footer-column">
+					<h2>Have more questions?</h2>
+					<div class="block-23 mb-3">
+						<ul>
+							<li><a href="https://github.com/AlexGonRo" target="_blank"><span
+										class="icon icon-github"></span><span class="text">Check out my
+										GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/a-gonzalez-rogel/" target="_blank"><span
+										class="icon icon-linkedin"></span><span class="text">Reach me on
+										Linkedin</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 
-	<script src="js/jquery/jquery.min.js"></script>
+	<script src="js/jquery/jquery-3.7.1.min.js"></script>
 	<script src="js/jquery/jquery.waypoints.min.js"></script>
-  	<script src="js/bootstrap/popper.min.js"></script>
-  	<script src="js/bootstrap/bootstrap.min.js"></script>
+	<script src="js/bootstrap/popper.min.js"></script>
+	<script src="js/bootstrap/bootstrap.min.js"></script>
 	<script src="js/main.js"></script>
-    
-  </body>
+
+</body>
+
 </html>
