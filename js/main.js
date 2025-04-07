@@ -74,42 +74,31 @@
 	};
 	scrollWindow();
 
-	// Something with the animations.
-	var contentWayPoint = function() {
-		var i = 0;
-		$('.animate-object').waypoint( function( direction ) {
 
-			if( direction === 'down' && !$(this.element).hasClass('animate-objectd') ) {
-				
-				i++;
+	document.addEventListener("DOMContentLoaded", () => {
 
-				$(this.element).addClass('item-animate');
-				setTimeout(function(){
-
-					$('body .animate-object.item-animate').each(function(k){
-						var el = $(this);
-						setTimeout( function () {
-							var effect = el.data('animate-effect');
-							if ( effect === 'fadeIn') {
-								el.addClass('fadeIn animate-objectd');
-							} else if ( effect === 'fadeInLeft') {
-								el.addClass('fadeInLeft animate-objectd');
-							} else if ( effect === 'fadeInRight') {
-								el.addClass('fadeInRight animate-objectd');
-							} else {
-								el.addClass('fadeInUp animate-objectd');
-							}
-							el.removeClass('item-animate');
-						},  k * 50, 'easeInOutExpo' );
-					});
-					
-				}, 100);
-				
+		// Use Intersection Observer to determine if objects are within the viewport
+		const observer = new IntersectionObserver(entries => {
+		  entries.forEach(entry => {
+			if (entry.isIntersecting) {
+			  entry.target.classList.add('animate__animated');
+			  entry.target.classList.add('animate__fadeInUp');
+			  entry.target.classList.add('animate__faster');
+			  entry.target.classList.remove("animate-object");
+			  observer.unobserve(entry.target);
+			  return;
 			}
-
-		} , { offset: '95%' } );
-	};
-	contentWayPoint();
+		  });
+		});
+	
+		// Get all the elements with the .animate class applied
+		const allAnimatedElements = document.querySelectorAll('.animate-object');
+	
+		// Add the observer to each of those elements
+		allAnimatedElements.forEach((element) => observer.observe(element));
+	
+	}); 
 
 })(jQuery);
+
 

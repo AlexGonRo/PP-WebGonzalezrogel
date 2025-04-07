@@ -404,10 +404,6 @@ h1, h2, h3, h4, h5,
 textarea.form-control {
   height: inherit !important; }
 
-.animate-object {
-  opacity: 0;
-  visibility: hidden; }
-
 .bg-primary {
   background: #ffbd39 !important; }
 
@@ -620,6 +616,7 @@ textarea.form-control {
   right: 0;
   width: 1200px;
   margin: 0 auto;
+  --animate-duration: 1.5s;
 }@media (max-width: 992px) {
   #intro-text-div {
     width: auto;
