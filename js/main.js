@@ -74,31 +74,77 @@
 	};
 	scrollWindow();
 
-
-	document.addEventListener("DOMContentLoaded", () => {
-
-		// Use Intersection Observer to determine if objects are within the viewport
-		const observer = new IntersectionObserver(entries => {
-		  entries.forEach(entry => {
-			if (entry.isIntersecting) {
-			  entry.target.classList.add('animate__animated');
-			  entry.target.classList.add('animate__fadeInUp');
-			  entry.target.classList.add('animate__faster');
-			  entry.target.classList.remove("animate-object");
-			  observer.unobserve(entry.target);
-			  return;
-			}
-		  });
-		});
-	
-		// Get all the elements with the .animate class applied
-		const allAnimatedElements = document.querySelectorAll('.animate-object');
-	
-		// Add the observer to each of those elements
-		allAnimatedElements.forEach((element) => observer.observe(element));
-	
-	}); 
-
 })(jQuery);
+
+// Make the elements fade in when you scroll down enough
+document.addEventListener("DOMContentLoaded", () => {
+
+	// Use Intersection Observer to determine if objects are within the viewport
+	const observer = new IntersectionObserver(entries => {
+		entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('animate__animated');
+			entry.target.classList.add('animate__fadeInUp');
+			entry.target.classList.add('animate__faster');
+			entry.target.classList.remove("animate-object");
+			observer.unobserve(entry.target);
+			return;
+		}
+		});
+	});
+
+	// Get all the elements with the .animate class applied
+	const allAnimatedElements = document.querySelectorAll('.animate-object');
+
+	// Add the observer to each of those elements
+	allAnimatedElements.forEach((element) => observer.observe(element));
+
+}); 
+
+// Some validations for my forms
+const constraints = {
+	emailSenderName: {
+		presence: {allowEmpty: false}
+	},
+	emailSenderMail: {
+		presence: {allowEmpty: false},
+		email: true
+	},
+	emailSubject: {
+		presence: {allowEmpty: false}
+	},
+	emailBody: {
+		presence: {allowEmpty: false}
+	}
+};
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', function (event) {
+	const formValues = {
+		emailSenderName: form.elements.emailSenderName.value,
+		emailSenderMail: form.elements.emailSenderMail.value,
+		emailSubject: form.elements.emailSubject.value,
+		emailBody: form.elements.emailBody.value
+	};
+
+	const errors = validate(formValues, constraints); /*External library*/
+
+	if (errors) {
+		event.preventDefault();
+		const errorMessage = Object
+			.values(errors)
+			.map(function (fieldValues) {
+				return fieldValues.join(', ')
+			})
+			.join("\n");
+
+		alert(errorMessage);
+	}
+}, false);
+
+function onRecaptchaSuccess () {
+	document.getElementById('contact-form').submit()
+}
+
 
 

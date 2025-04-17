@@ -40,11 +40,11 @@
 			<!-- Navbar options -->
 			<div class="collapse navbar-collapse" id="navbar-options">
 				<ul class="navbar-nav nav ms-auto">
-					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-					<li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>
-					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+					<li class="nav-item"><a href="#home-section" class="nav-link fw-bold"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link fw-bold"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link fw-bold"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#blog-section" class="nav-link fw-bold"><span>Pet projects</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link fw-bold"><span>Contact</span></a></li>
 				</ul>
 
 				<ul class="navbar-nav nav ms-auto">
@@ -300,61 +300,14 @@
 		<div class="container">
 			<div class="row justify-content-center mb-2 pb-5">
 				<div class="col-md-7 heading-section text-center animate-object">
-					<h2 class="mb-2">My Blog</h2>
-					<p>Here you'll find information about my pet projects, ideas, or new technologies I'm working with.
+					<h2 class="mb-2">Pet projects</h2>
+					<p>What have I been working on outside of work? Here you'll find information about my pet projects, ideas, or new technologies I'm working with.
 					</p>
 				</div>
 			</div>
-			<div class="row d-flex">
+			<div id="js-blog-entries" class="row d-flex">
 				<!-- TODO These entries... if the text is not long enough, the picture will be cut in half. I could try to fix it at some point-->
-				<div class="col-md-4 d-flex animate-object">
-					<div class="blog-entry justify-content-end">
-						<a href="#" class="block-20" style="background-image: url('images/work_in_progress.jpg');">
-						</a>
-						<div class="text mt-3 float-right d-block">
-							<div class="d-flex align-items-center mb-3 meta">
-								<p class="mb-0">
-									<span class="me-2">January 22, 2025</span>
-								</p>
-							</div>
-							<h3 class="heading"><a href="#">Blog post 1</a></h3>
-							<p>Image attribution: Work in progress by <a href="http://www.nyphotographic.com/">Nick
-									Youngson</a> <a rel="license"
-									href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a
-									href="http://pix4free.org/">Pix4free</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex animate-object">
-					<div class="blog-entry justify-content-end">
-						<a href="#" class="block-20" style="background-image: url('images/work_in_progress.jpg');">
-						</a>
-						<div class="text mt-3 float-right d-block">
-							<div class="d-flex align-items-center mb-3 meta">
-								<p class="mb-0">
-									<span class="me-2">October 25, 2024</span>
-								</p>
-							</div>
-							<h3 class="heading"><a href="#">Blog post 2</a></h3>
-							<p>Coming soon to website near you! You will have to wait until then...</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex animate-object">
-					<div class="blog-entry justify-content-end">
-						<a href="#" class="block-20" style="background-image: url('images/work_in_progress.jpg');">
-						</a>
-						<div class="text mt-3 float-right d-block">
-							<div class="d-flex align-items-center mb-3 meta">
-								<p class="mb-0">
-									<span class="me-2">April 11, 2024</span>
-								</p>
-							</div>
-							<h3 class="heading"><a href="#">Blog post 3</a></h3>
-							<p>I tried retrieving this entry, but got an error message: Error 418 - I'm a teapot.</p>
-						</div>
-					</div>
-				</div>
+				<!-- I let JavaScript fill in this one-->
 			</div>
 		</div>
 	</section>
@@ -386,23 +339,24 @@
 
 				<!-- Formulario de la derecha -->
 				<div class="col-md-7 col-lg-8 order-md-last d-flex">
-					<form action="#" class="mail-me-box bg-light pt-2 pb-2 px-4 pt-md-3 pb-md-3 px-md-5 contact-form animate-object">
+					<form method="POST" action="send_message.php" id="contact-form" class="mail-me-box bg-light pt-2 pb-2 px-4 pt-md-3 pb-md-3 px-md-5 contact-form animate-object">
 						<h1 class="fw-bold mb-1">Contact form</h1>
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Your Name">
+							<input type="text" class="form-control" name="emailSenderName" placeholder="Your Name">
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Your Email">
+							<input type="text" class="form-control" name="emailSenderMail" placeholder="Your Email">
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Subject">
+							<input type="text" class="form-control" name="emailSubject" placeholder="Subject">
 						</div>
 						<div class="form-group">
-							<textarea name="" id="" cols="30" rows="7" class="form-control"
+							<textarea name="" id="" cols="30" rows="7" name="emailBody" class="form-control"
 								placeholder="Message"></textarea>
 						</div>
 						<div class="form-group">
-							<input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+							<input type="submit" value="Send Message" class="btn btn-primary g-recaptcha py-3 px-5"
+								data-sitekey="6LcdRA0rAAAAADE7As5QPOBadNcy__iwqMp6uZwY" data-callback='onRecaptchaSuccess'>
 						</div>
 					</form>
 				</div>
@@ -443,7 +397,12 @@
 	<script	src="https://code.jquery.com/jquery-3.7.1.min.js"integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>	
+	<!--Some .js for my form-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<!--Custom-->
 	<script src="js/main.js"></script>
+	<script src="js/section-builders.js"></script>
 
 </body>
 
