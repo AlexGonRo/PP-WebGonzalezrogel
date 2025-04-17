@@ -16,7 +16,7 @@ fetch(entryApiUrl)
                 </a>
                 <div class="text mt-3 float-right d-block">
                     <h3 class="heading m-0"><a href="${post.link}">${post.title.rendered}</a></h3>
-                    <div class="d-flex align-items-center mb-3 meta">
+                    <div class="d-flex align-items-center mb-2 meta">
                         <p class="mb-0">
                             <span class="me-2">${new Date(post.date).toLocaleDateString()}</span>
                         </p>
@@ -27,6 +27,8 @@ fetch(entryApiUrl)
         `;
         blogContainer.appendChild(blogEntry);
     });
+    // Dispatch a custom event when blog entries are added to notify other scripts
+    document.dispatchEvent(new Event('blogEntriesLoaded'));
 })
 .catch(error => {
     console.error('Error fetching blog posts:', error);

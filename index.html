@@ -13,6 +13,7 @@
 	<!-- Other CSS sheets-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 	<!-- Bootstrap before my own style!-->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
@@ -364,6 +365,11 @@
 		</div>
 	</section>
 
+	<!-- Back to top button -->
+	<button	type="button" class="btn btn-floating btn-lg animate__animated  animate__faster" id="btn-back-to-top">
+	<i class="fas fa-arrow-up"></i>
+	</button>
+
 
 	<footer class="my-footer my-section">
 		<div class="container">
@@ -401,8 +407,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
 	<script src="https://www.google.com/recaptcha/api.js"></script>
 	<!--Custom-->
+	<script src="js/section-builders.js"></script> <!-- This one needs to be first, so we build our sections first and then we apply whatever logic might affect those sections -->
 	<script src="js/main.js"></script>
-	<script src="js/section-builders.js"></script>
+
 
 </body>
 
