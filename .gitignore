@@ -96,4 +96,6 @@ typings/
 .history
 
 ### Other elements
-config.php
+**/config.php
+.htaccess
+php.ini
