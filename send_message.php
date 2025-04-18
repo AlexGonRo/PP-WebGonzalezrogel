@@ -47,16 +47,18 @@ if (!empty($_POST)) {
     }
 
     // Assign a value to the important variables
-    $to = "alejandro@gonzalezrogel.com";
+    $myMail = "alejandro@gonzalezrogel.com";
     $body = "Name: $senderName\nEmail: $email\n\nMessage:\n$message";
-    $headers = "From: $email";
+    $headers = "From: $myMail" . "\r\n" .
+    "Reply-To: $email" . "\r\n" .
+    "X-Mailer: PHP/" . phpversion();
 
     // Let us sanitize the input even more!
     $body = str_replace("\n.", "\n..", $body);  // This is a common trick to prevent email injection attacks in old email servers.
     
     $bad_chars = ["\r", "\n", '%0A', '%0D'];
-    $subject = str_ireplace($bad_chars, '', $subjectRaw);
-    $body = str_ireplace($bad_chars, '', $bodyRaw);
+    $subject = str_ireplace($bad_chars, '', $subject);
+    $body = str_ireplace($bad_chars, '', $body);
 
     $match = "/(from\:|to\:|bcc\:|cc\:|content\-type\:|mime\-version\:|subject\:|x\-mailer\:|reply\-to\:|\%0a|\%0b)/i";
     if(preg_match($match, $subject) || preg_match($match, $body)) {
@@ -72,18 +74,21 @@ if (!empty($_POST)) {
     /* mail() has some limitations, such as that the email may be marked as spam,
      but it should work since I'm always sending the message to my server.
      And injections...https://doganoo.medium.com/mail-injection-in-php-attacks-and-prevention-cbc7bfe7ca98 */
-    if (mail($to, $subject, $body, $headers)) {
+     if (mail($myMail, $subject, $body, $headers)) {
       error_log("Email sent!");
         echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
         Message sent successfully!
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>';
+      exit;
     } else {
       error_log("Unknown problem when sending the email!");
+      error_log("Sender: $senderName, Email: $email, Subject: $subject, Body: $body, Headers: $headers");
         echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
         Something went wrong. Please try again later.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>';
+      exit;
     }
 } else {
   error_log("Failed to send email. POST empty!");
@@ -91,5 +96,6 @@ if (!empty($_POST)) {
   Something went wrong. Please try again later.
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>';
+  exit;
 }
 ?>

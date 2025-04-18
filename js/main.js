@@ -101,51 +101,6 @@ document.addEventListener("blogEntriesLoaded", () => {	// This listener is waiti
 
 }); 
 
-// Some validations for my forms
-const constraints = {
-	emailSenderName: {
-		presence: {allowEmpty: false}
-	},
-	emailSenderMail: {
-		presence: {allowEmpty: false},
-		email: true
-	},
-	emailSubject: {
-		presence: {allowEmpty: false}
-	},
-	emailBody: {
-		presence: {allowEmpty: false}
-	}
-};
-const form = document.getElementById('contact-form');
-
-form.addEventListener('submit', function (event) {
-	const formValues = {
-		emailSenderName: form.elements.emailSenderName.value,
-		emailSenderMail: form.elements.emailSenderMail.value,
-		emailSubject: form.elements.emailSubject.value,
-		emailBody: form.elements.emailBody.value
-	};
-
-	const errors = validate(formValues, constraints); /*External library*/
-
-	if (errors) {
-		event.preventDefault();
-		const errorMessage = Object
-			.values(errors)
-			.map(function (fieldValues) {
-				return fieldValues.join(', ')
-			})
-			.join("\n");
-
-		alert(errorMessage);
-	}
-}, false);
-
-function onRecaptchaSuccess () {
-	document.getElementById('contact-form').submit()
-}
-
 ////////////////
 // Go to top buttom
 //Get the button
